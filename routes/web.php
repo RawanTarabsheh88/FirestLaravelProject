@@ -83,3 +83,11 @@ Route::resource('news','NewsController');
 //Route::post('update/{id}',"NewsController@update");
 //Route::delete('news/{id}',"NewsController@delete");
 
+
+Auth::routes(['verify'=>true]);
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

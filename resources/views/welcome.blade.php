@@ -97,6 +97,20 @@
                     {{__('messages.hello')}}
                 </h3>
 
+                <h2>
+                    use if in blade
+                </h2>
+                @if($obj -> name== "rawan")
+                    <h3>Hello {{$obj -> name}}</h3>
+            @endif
+                {{--@foreach($data as $_data)--}}
+                    {{--@endforeach--}}
+
+                {{--@forelse($data as $_data)--}}
+                    {{--<p>{{$_data}}</p>--}}
+                {{--@empty--}}
+                    {{--<p>empty array</p>--}}
+                {{--@endforelse--}}
                 {{--<div class="links">--}}
                     {{--<a href="https://laravel.com/docs">Docs</a>--}}
                     {{--<a href="https://laracasts.com">Laracasts</a>--}}
