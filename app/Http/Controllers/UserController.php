@@ -18,4 +18,15 @@ class UserController extends Controller
 public function showUserName(){
     return 'Rawan Tarabsheh';
 }
+public function getIndex(){
+//    $data=[];
+//    $data['name']='rawan';
+//    $data['age']=5;
+//    return view('welcome',$data);
+    $obj = new \stdClass();
+    $obj -> name ="rawan";
+    $obj -> id =5;
+    $obj -> gender ="female";
+    return view('welcome',compact('obj'));
+}
 }
